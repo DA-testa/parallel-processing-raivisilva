@@ -14,7 +14,7 @@ def parallel_processing(wrk, jb, dr):
                 fastest = thr
                 fastest_end = end
         start = fastest_end
-        t_id = fastest[0]
+        t_id = fastest[1]
         end = start + dr[j_id]
         el.remove(fastest)
         el.append((end, t_id))
