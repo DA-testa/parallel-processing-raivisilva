@@ -11,7 +11,16 @@ def parallel_processing(wrk, jb, dr):
         for thr in el:
             end = thr[0]
             if end < fastest_end:
-
+                fastest = thr
+                fastest_end = end
+        start = fastest_end
+        t_id = fastest[0]
+        end = start + dr[j_id]
+        el.remove(fastest)
+        el.append((end, t_id))
+        el.sort()
+        output.append((t_id, start))
+        j_id += 1
     return output
 
 def main():
