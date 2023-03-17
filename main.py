@@ -25,18 +25,12 @@ def parallel_processing(wrk, jb, dr):
 
 def main():
 
-    n_darbinieki = 0
-    m_darbi = 0
-    n_darbinieki,m_darbi = list(map(int, input().split()))
-    data = list(map(int, input().split()))
-
-    data = []
-
-    result = parallel_processing(n,m,data)
+    wrk, jb = map(int, input().split())
+    dr = list(map(int, input().split()))
+    result = parallel_processing(wrk, jb, dr)
+    for t_id, start in result:
+        print(t_id, start)
     
-
-
-
 
 if __name__ == "__main__":
     main()
