@@ -7,7 +7,7 @@ def parallel_processing(wrk, jb, dr):
     while j_id <jb:
 
         fastest = el[1]
-        fastest_end = fastest[1]
+        fastest_end = fastest[0]
         for thr in el:
             end = thr[0]
             if end < fastest_end:
