@@ -1,8 +1,16 @@
 # python3
 
-def parallel_processing(n, m, data):
+def parallel_processing(wrk, jb, dr):
     output = []
-    
+    el = [(0, i) for i in range(wrk)]
+    j_id = 0
+    while j_id <jb:
+
+        fastest = el[1]
+        fastest_end = fastest[1]
+        for thr in el:
+            end = thr[0]
+            if end < fastest_end:
 
     return output
 
